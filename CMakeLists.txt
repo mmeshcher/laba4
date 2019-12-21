@@ -12,7 +12,7 @@ set(
   CACHE STRING "Default cache server"
 )
 
-include("tools/gate/cmake/HunterGate.cmake")
+include("tools/gate/HunterGate.cmake")
 
 HunterGate(
         URL "https://github.com/ruslo/hunter/archive/v0.23.214.tar.gz"
