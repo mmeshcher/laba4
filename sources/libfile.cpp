@@ -1,6 +1,6 @@
 // Copyright 2019 <mmeshcher>
 
-#include "header.hpp"
+#include <header.hpp>
 
 using std::string;
 using std::size_t;

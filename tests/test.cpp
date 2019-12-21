@@ -1,7 +1,7 @@
 // Copyright 2018 Your Name <your_email>
 
 #include <gtest/gtest.h>
-#include "header.hpp"
+#include <header.hpp>
 
 TEST(Account, SimpleTest1) {
 	Account acc = Account { "00001312" };
