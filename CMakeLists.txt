@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.4)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_VISIBILITY_PRESET hidden)
+#set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
 option(BUILD_COVERAGE "Build coverage" OFF)
 
@@ -43,14 +43,8 @@ target_link_libraries(
 )
 
 add_executable(
-        ${PROJECT_NAME}Demo
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/main.cpp
 )
-target_link_libraries(
-        ${PROJECT_NAME}Demo
-        ${PROJECT_NAME}
-)
-
 
 add_executable(
         tests
@@ -85,8 +79,7 @@ if (BUILD_COVERAGE)
   set(ENABLE_COVERAGE ON CACHE BOOL "Enable coverage build." FORCE)
   list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
   find_package(codecov)
-  add_coverage(${PROJECT_NAME})
-  add_coverage(${PROJECT_NAME}Demo)
+  add_coverage(source)
   add_coverage(tests)
   list(APPEND LCOV_REMOVE_PATTERNS "'${PROJECT_SOURCE_DIR}/tests/*'")
   coverage_evaluate()
