@@ -15,12 +15,11 @@ jobs:
     - docker run -v `pwd`:`pwd` -w `pwd` -t rusdevops/bootstrap-cpp ./scripts/checks.sh
   - name: "tests"
     script:
-    - docker run -t -v $(pwd):/var/builder -w /var/builder --entrypoint ./scripts/tests.sh toliak/bootstrap-cpp
+    - docker run -v `pwd`:`pwd` -w `pwd` -t toliak/bootstrap-cpp ./scripts/tests.sh
   - name: "quality"
     script:
     - ./scripts/genenv.sh
-    - docker run -t -v $(pwd):/var/builder -w /var/builder --entrypoint ./scripts/coverage.sh toliak/bootstrap-cpp
-
+    - docker run --env-file .env -v `pwd`:`pwd` -w `pwd` -t toliak/bootstrap-cpp ./scripts/coverage.sh
     # The bot has gone...
     # - docker run --env-file .env -v `pwd`:`pwd` -w `pwd` -t rusdevops/bootstrap-cpp scripts/duplication.sh
 
