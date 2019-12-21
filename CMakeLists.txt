@@ -43,6 +43,7 @@ target_link_libraries(
 )
 
 add_executable(
+        main
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/main.cpp
 )
 
