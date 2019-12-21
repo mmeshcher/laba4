@@ -22,13 +22,11 @@ protected:
 };
 
 TEST_F(BrokerImplTest, FindOne) {
-
 	auto it = acc_map.find("new_dir");
 	EXPECT_NE(it, acc_map.end());
 }
 
 TEST_F(BrokerImplTest, FindTwo) {
-
 	auto it = acc_map.find("new_dir/nested_dir");
 	EXPECT_NE(it, acc_map.end());
 }

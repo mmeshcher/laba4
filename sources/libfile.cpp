@@ -1,4 +1,4 @@
-// Copyright 2018 Your Name <your_email>
+// Copyright 2019 <mmeshcher>
 
 #include <header.hpp>
 
@@ -12,7 +12,7 @@ using boost::filesystem::directory_iterator;
 using std::map;
 
 AccountsMap BrokerImpl::resolve(const path& path) {
-	std::string dir_path= "";
+	std::string dir_path = "";
     find_paths(path, dir_path);
     return m_map;
 }
@@ -35,7 +35,7 @@ void BrokerImpl::add_balance(const string& path, const string& dt, const string&
 void BrokerImpl::find_paths(const path& p, const std::string& dir_path) {
 	if(boost::filesystem::is_directory(p))
     {
-        for(auto& entry : directory_iterator{ p })
+        for (auto& entry : directory_iterator{ p })
         {
             if (boost::filesystem::is_directory(entry))
             {
