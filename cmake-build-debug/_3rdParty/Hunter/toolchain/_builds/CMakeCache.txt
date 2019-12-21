@@ -228,7 +228,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 HUNTER_CONFIGURATION_TYPES:UNINITIALIZED=Release;Debug
 
 //No help, variable specified on the command line.
-HUNTER_SELF:UNINITIALIZED=/home/Xiaomi/.hunter/_Base/Download/Hunter/0.23.218/9a3594a/Unpacked
+HUNTER_SELF:UNINITIALIZED=/home/Xiaomi/.hunter/_Base/Download/Hunter/0.23.214/e14bc15/Unpacked
 
 //Value Computed by CMake
 HunterToolchain_BINARY_DIR:STATIC=/cygdrive/c/Users/Xiaomi/Desktop/boost4/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds
