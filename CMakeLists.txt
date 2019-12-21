@@ -35,6 +35,7 @@ add_library(
         ${PROJECT_NAME}
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/main.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/libfile.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/header.cpp
 )
 target_link_libraries(
         ${PROJECT_NAME}
