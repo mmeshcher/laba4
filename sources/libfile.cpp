@@ -24,7 +24,7 @@ void BrokerImpl::add_balance(const string& path, const string& dt, const string&
     }
 
     if (m_map[path].find(id) == m_map[path].end()) {
-        m_map[path][id] =  Account { dt } ;
+        m_map[path][id] =  Account { dt };
         return;
     }
     m_map[path][id].count++;

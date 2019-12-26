@@ -22,8 +22,7 @@ struct Account
 
     Account() {}
 
-    Account(std::string d)
-    {
+    Account(std::string d) {
         date = d;
         count = 1;
     }
